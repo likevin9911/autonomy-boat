@@ -1,0 +1,12 @@
+rosrun mavros mavsafety "mode"
+
+usage: mavsafety [-h] [-n MAVROS_NS] [-v] {arm,disarm,kill,safetyarea} ...
+mavsafety: error: invalid choice: 'mode' (choose from 'arm', 'disarm', 'kill', 'safetyarea')
+
+
+rosrun mavros mavsafety disarm
+rosrun mavros mavsafety arm
+
+
+rosservice call  /mavros/set_mode "custom_mode: 'HOLD'"
+rosservice call  /mavros/set_mode "custom_mode: 'GUIDED'"
